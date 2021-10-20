@@ -10,16 +10,17 @@
 // @grant        window.close
 // ==/UserScript==
 
-(function() {
-    'use strict';
+(function () {
+	'use strict';
 
-    function callbackclose(){
-        return function(){
-            close();
-        }
-    }
+	function callbackclose() {
+		return function () {
+			close();
+		}
+	}
 
-    var waitTime = 20;     // Time to wait in seconds
+	// Time to wait in seconds
+	var waitTime = 20;
 
-    setTimeout(callbackclose(),waitTime * 1000);
+	setTimeout(callbackclose(), waitTime * 1000);
 })();
